@@ -1,0 +1,318 @@
+html {
+    font-family: 'Lobster', cursive;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {font-size: 2.3em;}
+h2 {font-size: 1.9em;}
+h3 {font-size: 1.4em;}
+p {font-size: 1.2em;}
+
+button {
+    font-family: 'Lobster', cursive;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border:none;
+    color: azure;
+    background-color: rgba(0,0,0,.8);
+}
+
+button:hover {
+    box-shadow: 6px 6px 10px firebrick;
+    background-color: firebrick;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(90deg, firebrick, #580000);
+}
+
+header .logo {
+    margin: 0;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: azure;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:aliceblue;
+    box-shadow: 3px 5px;
+}
+
+header a:hover {
+    color: black;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 75vh;
+    color: aliceblue;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1968-Ford-GT40-Le-Mans.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#intro{
+    background-color: #580000;
+}
+
+#intro .container{
+    text-align: center;
+    padding: 30px 12px;
+    color: aliceblue;   
+}
+
+#cards{
+    background: linear-gradient(0deg, firebrick, #580000);
+    color: aliceblue;
+    text-align: center;
+}
+
+#cards .container {
+    padding: 30px 0px;
+}
+
+#cards p{
+    display: none;
+}
+
+#cards .card{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.card:first-child {
+    transition: all 0.4s ease;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1991-Mazda-787B.jpg');
+}
+
+.card:nth-child(2) {
+    transition: all 0.4s ease;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1970-Porsche-917.jpg');
+}
+
+.card:last-child {
+    transition: all 0.4s ease;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1988-Jaguar-XJR9.jpg');
+    background-position: center center;
+}
+
+.card:first-child:hover {
+    box-shadow: 0 1rem 2rem orange;
+}
+
+.card:nth-child(2):hover {
+    box-shadow: 0 1rem 2rem cyan;
+}
+
+.card:last-child:hover {
+    box-shadow: 0 1rem 2rem whitesmoke;
+}
+
+#t-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1964-Ferrari-250-GTO.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: aliceblue;
+    padding: 30px 12px;
+}
+
+#t-section .container{
+    margin-top: 0;
+}
+
+#lastsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 75vh;
+    color: aliceblue;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('media/1995-McLaren-F1-GTR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+footer{
+    background: linear-gradient(90deg, firebrick, #580000);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color:azure;
+}
+
+footer .container{
+    height: 50px;
+    display: flex;;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*for screens larger than 720px */
+@media (min-width:720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        padding-bottom: 0;
+        padding-right: 25px;
+    }
+
+    #hero {
+        height: 95vh;
+    }
+
+    #hero h1 {
+        font-size: 5rem;
+    }
+
+    #intro {
+        background: linear-gradient(0deg, #8b0000, #580000);
+    }
+
+    #intro h2 {
+        margin: 0;
+    }
+
+    #intro .container{
+        display: flex;
+        padding-bottom: 0px;
+        justify-content: center;
+    }
+
+    #intro .texts{
+        width: 50%;
+        max-width: 600px;
+        text-align: center;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    #intro .img-container{
+        transition: all 0.4s ease;
+        background-image: url('media/2024-Lamborghini-SC63.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+        border-radius: 50px;
+    }
+
+    #intro .img-container:hover {
+        box-shadow: 0 1rem 2rem chartreuse;
+    }
+
+    #cards {
+        background: linear-gradient(0deg, firebrick, #8b0000);
+    }
+
+    #cards .deck {
+        display: flex;
+        justify-content: center;
+    }
+
+    #cards .card{
+        margin: 5px;
+        height: 70vh;
+    } 
+
+    #cards h3 {
+        margin-top: 0;
+    }
+
+    #cards p{
+        margin-top: 0;
+        display: block;
+    }
+
+    #lastsection h1{
+        font-size: 6rem;
+
+    }
+}
